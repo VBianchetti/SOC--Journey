@@ -1,36 +1,48 @@
-# 🛡️ SOC Lab – ICMPv6 & Network Connectivity Analysis (Tcpdump)
+# 🛡️ SOC Lab – Network Traffic Analysis with Tcpdump (DNS + ICMPv6)
 
 ## 📌 Overview
-This lab focuses on analyzing **ICMPv6 traffic** using Tcpdump in a Linux environment.  
-The objective is to understand how network connectivity is tested at the packet level and how a SOC Analyst interprets this type of traffic.
+This lab focuses on **network traffic analysis using Tcpdump in a Linux environment**, simulating real SOC (Security Operations Center) activities.
+
+The objective is to understand how DNS resolution, traffic filtering, and ICMPv6 connectivity tests work at the packet level, and how a SOC Analyst interprets network behavior in real time.
 
 ---
 
 ## 🎯 Objective
-- Capture ICMPv6 traffic using Tcpdump
-- Identify Echo Request and Echo Reply packets
-- Understand how `ping` works at the network layer
-- Differentiate normal network behavior from potential scanning activity
-- Practice packet-level analysis for SOC investigations
+- Analyze DNS queries and responses (A and AAAA records)
+- Understand IPv4 vs IPv6 resolution behavior
+- Capture and filter network traffic using Tcpdump
+- Identify ICMPv6 Echo Request and Echo Reply packets
+- Understand basic network connectivity at packet level
+- Differentiate normal traffic from potentially suspicious behavior
 
 ---
 
 ## 🌐 Environment
 - OS: Linux Mint (or similar Linux distribution)
-- Tool: Tcpdump
+- Tools: Tcpdump, Ping
 - Network: Local Wi-Fi (IPv6 enabled)
-- Protocol analyzed: ICMPv6
+- Protocols analyzed: DNS, TCP/IP, ICMPv6
 
 ---
 
 ## 🔧 Tools Used
-- tcpdump
-- ping (IPv6 enabled via `-6` or automatic resolution)
-- Terminal (Linux CLI)
+- tcpdump (packet capture and filtering)
+- ping (network connectivity testing)
+- Linux terminal (CLI)
 
 ---
 
-## 📡 Phase 1 – ICMPv6 Capture Setup
+# 📡 Phase 1 – DNS Traffic Analysis
 
-```bash
-sudo tcpdump -i wlo1 -nn icmp6
+We analyzed DNS traffic to understand how domain resolution works before a connection is established.
+
+### 🔍 Observed DNS behavior:
+- `A?` → IPv4 resolution request
+- `AAAA?` → IPv6 resolution request
+- Multiple IP addresses returned (CDN behavior)
+- Dual-stack DNS queries are standard in modern browsers
+
+### 📌 Example:
+```text
+A? google.com
+AAAA? google.com
