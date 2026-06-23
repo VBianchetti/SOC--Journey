@@ -7,7 +7,10 @@ Observed event types:
 - alert
 - flow
 
-Example alert:
+Primary Investigation:
+- Nmap scan traffic from 192.168.0.13
+
+Secondary Observations (noise):
 - ET INFO Spotify P2P Client
 
 Analysis performed:
