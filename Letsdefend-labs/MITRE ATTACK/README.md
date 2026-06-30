@@ -11,3 +11,10 @@ Quando um alerta é gerado por um SIEM ou EDR, o Analista SOC pode relacioná-lo
 
 Adiante teremos um estudo de caso: Ataque Phishing 
 Um colaborador recebe um E-mail informando que sua senha expirou e precisa ser redefinida. Sem analisar quem enviou aquele e-mail, ele clica no link que direciona a um site malicioso que se assemelha ao sistema que a empresa usa. Após inserir suas credencias, o atacante obtem acesso a conta 
+
+Etapa - Envio do E-mail              Tatica - Inicial Access          Tecnica - Spearphishing Link 
+Etapa - Captura de Credencial        Tatica - Credential Access       Técnica - Phishing
+Etapa - Utilização das Credenciais   Tatica - Persistance             Técnica - Valid Accounts 
+Etapa - Acesso ao Sistema            Tatica - Lateral Movement        Técnica - Valid Accounts
+
+T1566.002 – Spearphishing Link
