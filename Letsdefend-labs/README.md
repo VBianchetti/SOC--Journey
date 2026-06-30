@@ -1,1 +1,1 @@
-
+Trilha SOC Analyst Path - Ela me trouxe a base principal de como funciona e como é o dia a dia de um analista SOC. Dentro desse estudo feito, trarei aqui breve laborátorios de como esse estudo me ajudou e a praticidade dele sendo feito a parte do LetsDefend !
