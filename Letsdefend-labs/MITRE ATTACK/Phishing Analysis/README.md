@@ -1,1 +1,1 @@
-
+Um Colaborador recebe um e-mail informando que sua senha corporativa expirou e precisa ser redefinida. Sem verificar o remetente ou a URL, ele acessa o link informado e insere suas credenciais em uma página falsa que imita o portal da empresa.
